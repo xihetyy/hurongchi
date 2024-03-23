@@ -102,6 +102,9 @@
         点我进入
       </button>
     </div>
+    <div class="demo1">
+      唐园源❤胡荣池
+    </div>
     <div class="demo">
 
     </div>
@@ -188,10 +191,21 @@
       return `${dd}天 ${shi}时 ${fen}分 ${miao}秒`
     }
 
+    var str1 = '唐园源❤胡荣池'
+    var str2 = '猪猪❤乖乖'
+
     setInterval(() => {
       var a = time()
       document.querySelector('.demo').innerHTML = a
+      // document.querySelector('.demo1').innerHTML = str2
     }, 1000)
+    setInterval(()=>{
+      if(new Date().getTime()%2==0){
+        document.querySelector('.demo1').innerHTML = str2
+      }else{
+        document.querySelector('.demo1').innerHTML = str1
+      }
+    },3000)
 
 
 
